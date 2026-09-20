@@ -227,9 +227,15 @@ class GatewayReader:
     async def _update_endpoint(self, endpoint: GatewayEndpoint) -> None:
         """Fetch a single endpoint and store the response."""
         formatted_url = endpoint.get_url(self.auth.protocol, self.host)
+        request_kwargs = {"follow_redirects": False}
+        if isinstance(self.gateway, EnvoyLegacy):
+            # Pre-3.9 Envoy-R gateways can take more than 10 seconds to
+            # generate legacy HTML endpoints such as /production.
+            request_kwargs["timeout"] = 30.0
+
         response = await self._async_get(
             formatted_url,
-            follow_redirects=False
+            **request_kwargs
         )
         if self.gateway:
             self.gateway.set_endpoint_data(endpoint, response)
