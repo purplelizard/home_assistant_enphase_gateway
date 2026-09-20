@@ -310,7 +310,7 @@ class GatewayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             ),
         }
 
-        if self._gateway_reader.gateway.encharge_inventory:
+        if getattr(self._gateway_reader.gateway, "encharge_inventory", None):
             schema.update(
                 {vol.Optional(CONF_ENCHARGE_ENTITIES, default=True): bool}
             )
