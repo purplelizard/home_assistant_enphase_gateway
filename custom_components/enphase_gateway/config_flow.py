@@ -350,15 +350,11 @@ class GatewayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             config_entry: config_entries.ConfigEntry
     ) -> config_entries.OptionsFlow:
         """Create the options flow."""
-        return GatewayOptionsFlow(config_entry)
+        return GatewayOptionsFlow()
 
 
 class GatewayOptionsFlow(config_entries.OptionsFlow):
     """Handle a options flow for Enphase Gateway."""
-
-    def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
-        """Initialize options flow."""
-        self.config_entry = config_entry
 
     async def async_step_init(
             self,
