@@ -11,5 +11,5 @@ AVAILABLE_PROPERTIES = {
     "seven_days_consumption", "lifetime_consumption", "inverters_production",
     "grid_status", "ensemble_power", "ensemble_submod", "ensemble_secctrl",
     "battery_storage", "grid_import", "grid_import_lifetime", "grid_export",
-    "grid_export_lifetime",
+    "grid_export_lifetime", "encharge_inventory", "encharge_power",
 }
