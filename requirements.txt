@@ -9,5 +9,5 @@ xmltodict
 envoy-utils
 beautifulsoup4
 jsonpath
-homeassistant
+homeassistant==2026.11.0
 awesomeversion >= 22.9.0
