@@ -7,6 +7,8 @@
 
 This fork preserves support for legacy pre-3.9 Envoy-R gateways on current Home Assistant after the original [Hoffmann77/home_assistant_enphase_gateway](https://github.com/Hoffmann77/home_assistant_enphase_gateway) repository was archived.
 
+The integration was originally developed and maintained by [@Hoffmann77](https://github.com/Hoffmann77); this fork continues that work with a narrow maintenance focus on current Home Assistant compatibility and legacy Envoy-R support.
+
 Legacy compatibility fixes maintained here include:
 
 - correct legacy `installer` and `envoy` authentication, including the Envoy-R last-six-serial-digits password convention;
