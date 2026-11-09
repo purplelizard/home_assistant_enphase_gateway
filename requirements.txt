@@ -5,6 +5,7 @@ pytest
 pytest-asyncio
 lxml
 orjson
+PyJWT
 xmltodict
 envoy-utils
 beautifulsoup4
