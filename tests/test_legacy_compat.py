@@ -4,12 +4,9 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from custom_components.enphase_gateway.gateway_reader.auth import LegacyAuth
-from custom_components.enphase_gateway.gateway_reader.gateway import EnvoyLegacy
-from custom_components.enphase_gateway.gateway_reader.gateway_reader import (
-    EnvoyUtils,
-    GatewayReader,
-)
+from gateway_reader.auth import LegacyAuth
+from gateway_reader.gateway import EnvoyLegacy
+from gateway_reader.gateway_reader import EnvoyUtils, GatewayReader
 
 
 def legacy_reader(serial_number="121137057297"):
