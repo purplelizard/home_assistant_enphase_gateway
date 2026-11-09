@@ -3,6 +3,19 @@
 
 **This is a custom HACS integration for Enphase Gateways.**
 
+## About this fork
+
+This fork preserves support for legacy pre-3.9 Envoy-R gateways on current Home Assistant after the original [Hoffmann77/home_assistant_enphase_gateway](https://github.com/Hoffmann77/home_assistant_enphase_gateway) repository was archived.
+
+Legacy compatibility fixes maintained here include:
+
+- correct legacy `installer` and `envoy` authentication, including the Envoy-R last-six-serial-digits password convention;
+- a longer request timeout for slow legacy HTML endpoints such as `/production`;
+- compatibility with current Home Assistant OptionsFlow behavior; and
+- graceful handling of battery-related properties that legacy Envoy-R gateways do not expose.
+
+These changes have been tested with an Envoy-R running firmware R3.7.3. The rest of the integration remains based on the original upstream project and retains its existing device support.
+
 Please be aware that this custom integration **does not** overwrite the "enphase_envoy" core integration (see: [Limitations](#limitations)).
 
 # Installation
