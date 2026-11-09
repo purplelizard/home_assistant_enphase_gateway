@@ -5,9 +5,9 @@ pytest
 pytest-asyncio
 lxml
 orjson
+PyJWT
 xmltodict
 envoy-utils
 beautifulsoup4
 jsonpath
-homeassistant
 awesomeversion >= 22.9.0
