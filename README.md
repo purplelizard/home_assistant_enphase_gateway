@@ -1,7 +1,4 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-
-
-**This is a custom HACS integration for Enphase Gateways.**
+**This is a custom Home Assistant integration for Enphase Gateways.**
 
 ## About this fork
 
@@ -20,17 +17,39 @@ These changes have been tested with an Envoy-R running firmware R3.7.3. The rest
 
 Please be aware that this custom integration **does not** overwrite the "enphase_envoy" core integration (see: [Limitations](#limitations)).
 
+<!-- ha-marketplace:exclude-start -->
 # Installation
-### Prerequisites:
-- Please ensure that the "enphase_envoy" core integration is disabled.
-- Ensure that custom integrations overwriting the core integration are disabled.   
-- Running two or more integrations accessing your Enphase gateway will result in unexpected behaviour and errors.
 
-### Installation:
-1. Install [HACS](https://hacs.xyz/) if you haven't already
-2. Add this repository as a [custom integration repository](https://hacs.xyz/docs/faq/custom_repositories) in HACS
-4. Restart home assistant
-5. Add the integration through the home assistant configuration flow
+### Prerequisites
+
+- Ensure that the built-in `enphase_envoy` integration is disabled.
+- Ensure that any other custom integration accessing the same Enphase gateway is disabled.
+- Running two or more integrations against the same Enphase gateway can cause unexpected behavior and errors.
+
+### Home Assistant 2026.11 and newer
+
+Home Assistant includes the Marketplace under **Settings > Marketplace**.
+
+Until this repository is listed in the Marketplace catalog:
+
+1. Go to **Settings > Marketplace**.
+2. Select **Add from link**.
+3. Enter `purplelizard/home_assistant_enphase_gateway` or the full GitHub repository URL.
+4. Add the repository, then select it in Marketplace and choose **Install**.
+5. When installation finishes, add **Enphase Gateway (HACS)** under **Settings > Devices & services**.
+
+Once this repository is listed in the Marketplace catalog, you can find it directly by searching Marketplace for **Enphase Gateway**.
+
+### Home Assistant before 2026.11
+
+Use HACS:
+
+1. Install [HACS](https://hacs.xyz/) if needed.
+2. Add this repository as a custom integration repository in HACS.
+3. Install **Enphase Gateway (HACS)**.
+4. Restart Home Assistant if prompted.
+5. Add the integration through **Settings > Devices & services**.
+<!-- ha-marketplace:exclude-end -->
 
 
 ## Supported Devices
